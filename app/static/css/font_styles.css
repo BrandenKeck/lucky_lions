@@ -1,1 +1,54 @@
-/* TODO */
+/*
+FONT IMPORT
+*/
+@font-face{
+  font-family: "beastian";
+  src: url("font/beastian.ttf");
+}
+
+/*
+STANDARD TEXT
+*/
+.lions-logo-text{
+  font-family: "courier new";
+  font-weight: bold;
+  font-size: 32px;
+  display: inline;
+  margin: 0px;
+  padding-left: 4px;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.lions-index-title-text{
+  margin: 0px; padding: 0px;
+  font-family: "beastian"; Arial;
+  font-size: 112px;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.lions-index-desc-text{
+  margin: 0px; padding: 0px;
+  font-family: "courier new";
+  font-size: 48px;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.lions-desc-text{
+  margin: 0px; padding: 0px;
+  font-family: "courier new";
+  font-size: 28px;
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+/*
+LINKS AND CONTROLS
+*/
+
+.lions-index-link-text{
+  font-family: Arial;
+  font-size: 36px;
+  display: inline;
+}
+.lions-nav-link-text{
+  display: inline;
+}

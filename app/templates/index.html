@@ -1,31 +1,28 @@
-<!-- Base Meta Information -->
-<!doctype html>
-<html lang="en">
+<!-- extend the base file -->
+{% extends "base.html" %}
 
-<!-- Head info -->
-<head>
-  <title>Lucky Lions Casino</title>
-  <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='img/lucky_lions_ico.jpg') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/global_styles.css') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/font_styles.css') }}" />
-</head>
+<!-- application block html -->
+{% block app %}
 
-<!-- Create Body -->
-<body>
+<div id="eyes1"></div>
+<div class="row" id="full_screen" onload="alert('ahhhh');">
+  <div class="w-100 text-center">
 
-  <div class="container-fluid">
+    <p class="lions-index-title-text">Lucky Lions</p>
 
-    HELLO WORLD
+    <a href="{{ url_for('lions.app_home') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+      <p class="lions-index-link-text">Enter Application</p>
+      <i class="fas fa-angle-double-right lions-index-link-text"></i>
+    </a>
+    <img class="index-image me-4" src="{{ url_for('static', filename='img/stylized_logo.png') }}" />
+    <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+      <p class="lions-index-link-text">View Roadmap</p>
+      <i class="fas fa-angle-double-right lions-index-link-text"></i>
+    </a>
+
+    <p class="lions-index-desc-text">Welcome to the Lions Den.</p>
 
   </div>
+</div>
 
-  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.min.js') }}" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="{{ url_for('static', filename='js/fontawesome.min.js') }}" crossorigin="anonymous"></script>
-  <script src="{{ url_for('static', filename='js/global_scripts.js') }}"></script>
-
-</body>
-
-</html>
+{% endblock %}

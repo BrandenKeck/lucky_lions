@@ -53,8 +53,8 @@ def create_app(test_config=None):
         #app.cli.add_command(purpose_cli)
 
     # Register Flask Blueprints
-    from app.views import bp
-    app.register_blueprint(bp)
+    from app.views import lions_bp
+    app.register_blueprint(lions_bp)
 
     # SQL Alchemy Shell Commands Setup
     @app.shell_context_processor
