@@ -1,3 +1,4 @@
+.venv
 aws_keys
 instance
 migrations
