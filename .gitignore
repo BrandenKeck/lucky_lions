@@ -3,3 +3,5 @@ aws_keys
 instance
 migrations
 */__pycache__
+./app/models/__pycache__
+*~
