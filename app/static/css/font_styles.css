@@ -52,3 +52,17 @@ LINKS AND CONTROLS
 .lions-nav-link-text{
   display: inline;
 }
+
+@media only screen and (max-width: 1400px) {
+  .lions-index-title-text{font-size: 72px;}
+  .lions-index-desc-text{font-size: 32px;}
+  .lions-desc-text{font-size: 24px;}
+  .lions-index-link-text{font-size: 18px;}
+}
+
+@media only screen and (max-width: 800px) {
+  .lions-index-title-text{font-size: 48px;}
+  .lions-index-desc-text{font-size: 24px;}
+  .lions-desc-text{font-size: 16px;}
+  .lions-index-link-text{font-size: 14px;}
+}

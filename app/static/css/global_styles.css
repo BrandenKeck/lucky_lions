@@ -37,3 +37,11 @@ IMAGES
   width: 440px;
   display: inline;
 }
+
+@media only screen and (max-width: 1400px) {
+  .index-image{width: 260px;}
+}
+
+@media only screen and (max-width: 800px) {
+  .index-image{width: 180px;}
+}
