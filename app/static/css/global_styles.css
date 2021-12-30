@@ -18,13 +18,23 @@ SPACING
 /*
 BOXES AND STRUCTURES
 */
-#full_screen{
+.full_screen{
   margin: 0; padding: 0;
   height: 100vh;
   width: 100%;
   display: flex;
+  overflow: hidden
+}
+.full_screen_align_center{
   align-items: center;
-  background-color: black;
+}
+.animation_canvas{
+  position:fixed;
+  z-index: -1;
+}
+
+#roadmap {
+  flex: 1 1;
 }
 
 /*

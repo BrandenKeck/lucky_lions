@@ -4,8 +4,18 @@
 <!-- application block html -->
 {% block app %}
 
-<p class="lions-desc-text">
-  Road Map Goes Here
-</p>
+<canvas id="roadmap_ani" class="animation_canvas"></canvas>
+<div class="row full_screen">
+  <div class="w-100 text-center">
+
+    <p class="lions-desc-text">Road Map Goes Here</p>
+
+    <div id="roadmap"></div>
+
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/vis-network.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
 
 {% endblock %}
