@@ -25,9 +25,10 @@ STANDARD TEXT
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-.lions-index-desc-text{
+.lions-header-text{
   margin: 0px; padding: 0px;
   font-family: "courier new";
+  font-weight: bold;
   font-size: 48px;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
@@ -49,10 +50,25 @@ LINKS AND CONTROLS
   font-size: 36px;
   display: inline;
 }
-.lions-nav-link-text{
+.lions-menu-text{
+  text-shadow: 2px 2px #000;
+  font-family: "courier new";
+  font-size: 28px;
   display: inline;
 }
+.lions-menu-button{
+  display: inline-flex;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  color: white;
+  text-shadow: 2px 2px #000;
+  font-family: "courier new";
+  font-size: 28px;
+}
 
+/*
+MEDIA QUERIES
+*/
 @media only screen and (max-width: 1400px) {
   .lions-index-title-text{font-size: 72px;}
   .lions-index-desc-text{font-size: 32px;}

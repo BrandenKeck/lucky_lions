@@ -1,11 +1,34 @@
 <!-- extend the base file -->
 {% extends "base.html" %}
 
+<!-- added styles block html -->
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/menu_styles.css') }}" />
+
+{% endblock %}
+
+{% block nav %}
+  {% include 'menu.html' %}
+{% endblock %}
+
 <!-- application block html -->
 {% block app %}
 
-<p class="lions-desc-text">
-  Application Goes Here
-</p>
+<canvas id="app_ani" class="animation_canvas"></canvas>
+<div class="row full_screen">
+  <div class="w-100 text-center">
+    <p class="lions-header-text">Lucky Lions Application</p>
+    <p class="lions-desc-text">Application Coming Soon.</p>
+  </div>
+</div>
+
+{% endblock %}
+
+<!-- added scripts block html -->
+{% block script %}
+
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
 {% endblock %}

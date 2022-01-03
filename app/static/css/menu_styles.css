@@ -1,0 +1,102 @@
+/* GLOBAL FIX */
+*{
+  box-sizing: border-box;
+}
+
+/* POSITIONING AND COMPONENTS */
+.nav_menu{
+  width: 320px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.nav_menu .trigger{
+  position: fixed;
+  z-index: 2;
+  left: 20px;
+  top: 20px;
+  background-color: transparent;
+  outline: 0;
+  border: none;
+  pointer-events: visible;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 30px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  curser: pointer;
+}
+.nav_menu .menu_wrapper{
+  background-color: #008000;
+  border: 2px solid #00FF31;
+}
+.nav_menu .menu{
+  position: relative;
+  padding: 20px;
+  margin: 0;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+.nav_menu .menu li a{
+  text-decoration: none;
+  padding: 2px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.nav_menu .menu li a::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -20px;
+  width: 0;
+  margin: auto;
+  display: inline-flex;
+  height: 0;
+  border: 2px solid white;
+  border-radius: 100px;
+  transition: all ease 0.25s;
+}
+
+/*
+ACTIVE COMPONENTS
+*/
+.nav_menu.active{
+  pointer-events: visible;
+}
+.nav_menu .menu li a.active::after,
+.nav_menu .menu li a.active::hover{
+  opacity: 1;
+  left: 0;
+  width: 100%;
+}
+
+/*
+HR STYLES
+*/
+.menu_hr{
+  background-color: #fff;
+  width: 80%;
+  text-align: center;
+}
+
+/*
+MEDIA QUERIES
+*/
+@media only screen and (max-width: 1400px) {
+
+}
+
+@media only screen and (max-width: 800px) {
+
+}

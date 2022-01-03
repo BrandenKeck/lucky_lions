@@ -1,4 +1,12 @@
 /*
+COLOR REFERENCE:
+background - black, #000
+textcolor - white, #fff
+bright/neon green - #008000
+neon green accent - #00FF31
+/*
+
+/*
 GLOBAL FIX
 */
 body{
@@ -10,10 +18,9 @@ body{
 .btn-primary{
   background-color: #008000;
 }
-
-/*
-SPACING
-*/
+.hidden{
+  visibility: hidden;
+}
 
 /*
 BOXES AND STRUCTURES
@@ -23,35 +30,60 @@ BOXES AND STRUCTURES
   height: 100vh;
   width: 100%;
   display: flex;
-  overflow: hidden
+  overflow: hidden;
 }
 .full_screen_align_center{
   align-items: center;
 }
 .animation_canvas{
-  position:fixed;
+  position: fixed;
   z-index: -1;
 }
+.shaded_box{
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  margin: 20px; padding: 20px;
+}
+.
 
-#roadmap {
-  flex: 1 1;
+/*
+SPACING
+*/
+.top_spacing{
+  padding-top: 40px;
+}
+#roadmap{
+  padding-top: 20px; padding-bottom: 20px;
+  padding-left: 360px; padding-right: 360px;
 }
 
 /*
 IMAGES
 */
-.lion-nav-img{
-  width: 40px;
-}
-.index-image{
+.index_image{
   width: 440px;
   display: inline;
 }
 
+@media only screen and (max-width: 1750px) {
+  #roadmap{
+    padding-top: 10px; padding-bottom: 10px;
+    padding-left: 0px; padding-right: 0px;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .index-image{width: 260px;}
+  #roadmap{
+    padding-top: 10px; padding-bottom: 10px;
+    padding-left: 0px; padding-right: 0px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .index-image{width: 180px;}
+  #roadmap{
+    padding-top: 10px; padding-bottom: 10px;
+    padding-left: 60px; padding-right: 60px;
+  }
 }

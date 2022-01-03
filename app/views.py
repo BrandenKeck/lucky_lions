@@ -14,7 +14,7 @@ lions_bp = Blueprint('lions', __name__)
 
 # Framework Index Page
 @lions_bp.route('/', methods=('GET',))
-def index():
+def home():
 
     # Get Database Objects
     #projects = Project.query.all()
@@ -31,5 +31,5 @@ def roadmap():
 
 # Route to application pages
 @lions_bp.route('/app', methods=('GET',))
-def app_home():
+def app():
     return render_template('app.html')

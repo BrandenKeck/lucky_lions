@@ -1,21 +1,70 @@
 <!-- extend the base file -->
 {% extends "base.html" %}
 
+<!-- added styles block html -->
+{% block styles %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/menu_styles.css') }}" />
+
+{% endblock %}
+
+<!-- Navigation Block HTML -->
+{% block nav %}
+  {% include 'menu.html' %}
+{% endblock %}
+
 <!-- application block html -->
 {% block app %}
 
 <canvas id="roadmap_ani" class="animation_canvas"></canvas>
 <div class="row full_screen">
   <div class="w-100 text-center">
-
-    <p class="lions-desc-text">Road Map Goes Here</p>
-
-    <div id="roadmap"></div>
-
+    <p class="lions-header-text">Lucky Lions Road Map</p>
+    <p class="lions-desc-text">Here's What's Cookin'</p>
+  </div>
+  <div id="roadmap" class="text-left">
+    <div class="shaded_box">
+      <p class="lions-desc-text">
+        <u><b>Q1 2022:</b> UI Development</u>
+      </p>
+      <p class="lions-desc-text">
+        During the first quarter of 2022, we will be developing our website interface.
+      </p>
+    </div>
+    <div class="shaded_box">
+      <p class="lions-desc-text">
+        <u><b>Q2 2022:</b> Smart Contract Development</u>
+      </p>
+      <p class="lions-desc-text">
+        We will be working on our Algorand Smart Contracts throughout Q2 2022.
+      </p>
+    </div>
+    <div class="shaded_box">
+      <p class="lions-desc-text">
+        <u><b>Q3 2022:</b> Application Launch and Initial Incentives</u>
+      </p>
+      <p class="lions-desc-text">
+        During this phase, we will be engaging potential users via coin offerings and other incentives.
+      </p>
+    </div>
+    <div class="shaded_box">
+      <p class="lions-desc-text">
+        <u><b>Q4 2022:</b> Ongoing Development and Relationship Building</u>
+      </p>
+      <p class="lions-desc-text">
+        Throughout the later part of the year, we will be working on nice-to-have features
+        and will be working to develop relationships with other projects in the Algorand community
+      </p>
+    </div>
   </div>
 </div>
 
-<script src="{{ url_for('static', filename='js/vis-network.min.js') }}"></script>
+{% endblock %}
+
+<!-- added scripts block html -->
+{% block script %}
+
+<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
 <script src="{{ url_for('static', filename='js/roadmap.js') }}"></script>
 
 {% endblock %}

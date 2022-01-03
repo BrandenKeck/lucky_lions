@@ -1,0 +1,44 @@
+<div class="nav_menu hidden">
+  <button class="trigger">
+    <p class="lions-menu-button">
+      <i class="fas fa-bars"></i>
+    </p>
+  </button>
+  <div class="menu_wrapper top_spacing">
+    <hr class="menu_hr" />
+    <ul class="menu">
+      <li>
+        <a href="{{ url_for('lions.home') }}">
+          <p class="lions-menu-text">
+            <i class="fas fa-home"></i>
+            Home
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('lions.app') }}">
+          <p class="lions-menu-text">
+            <i class="fas fa-network-wired"></i>
+            App
+          </p>
+        </a>
+      </li>
+      <li>
+        <a href="{{ url_for('lions.roadmap') }}">
+          <p class="lions-menu-text">
+            <i class="far fa-map"></i>
+            Roadmap
+          </p>
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://tinychart.org/asset/297995609">
+          <p class="lions-menu-text">
+            <i class="fas fa-chart-line"></i>
+            Tinycharts
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

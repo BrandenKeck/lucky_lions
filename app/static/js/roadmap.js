@@ -2,51 +2,15 @@
 let canvas = document.getElementById('roadmap_ani');
 let ctx = canvas.getContext('2d');
 
-function create_roadmap(){
-
-  // create an array with nodes
-  var nodes = new vis.DataSet([
-    { id: 1, label: "Node 1" },
-    { id: 2, label: "Node 2" },
-    { id: 3, label: "Node 3" },
-    { id: 4, label: "Node 4" },
-    { id: 5, label: "Node 5" },
-  ]);
-
-  // create an array with edges
-  var edges = new vis.DataSet([
-    { from: 1, to: 3 },
-    { from: 1, to: 2 },
-    { from: 2, to: 4 },
-    { from: 2, to: 5 },
-    { from: 3, to: 3 },
-  ]);
-
-  // create a network
-  var container = document.getElementById("roadmap");
-  var data = {
-    nodes: nodes,
-    edges: edges,
-  };
-  var options = {};
-  var network = new vis.Network(container, data, options);
-}
-
 function roadmap_animation(){
 
   // Start Animation on Image Load
-    positions = [
-      {'x': 10, 'y': 10, 'o': 0},
-      {'x': 1000, 'y': 600, 'o': -2.0},
-      {'x': 500, 'y': 50, 'o': -4.0},
-      {'x': 220, 'y': 800, 'o': -0.5},
-      {'x': 1400, 'y': 120, 'o': -1.5}
-    ]
-    render_ani(positions);
+    bubbles = init_bubbles();
+    render_ani(bubbles);
 
 }
 
-function render_ani(img, positions){
+function render_ani(bubbles){
 
   // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -58,35 +22,119 @@ function render_ani(img, positions){
   canvas.height = wih;
 
   // Draw Animations
-  for(var i = 0; i < positions.length; i++) {
-    xx = positions[i].x;
-    yy = positions[i].y;
-    if(positions[i].o < 0){op = 0;}
-    else{op = Math.sin(positions[i].o);}
-    if(op < 0){op = 0;}
-    ctx.globalAlpha = op;
+  for(var i = 0; i < bubbles.length; i++) {
 
-    const radius = 10;
-    context.beginPath();
-    context.arc(xx, yy, radius, 0, 2 * Math.PI, false);
-    context.fillStyle = 'green';
-    context.fill();
-    context.stroke();
+    // Get Dimensions
+    xx = bubbles[i].x;
+    yy = bubbles[i].y;
+    rr = bubbles[i].r;
+    oo = bubbles[i].o;
 
-    positions[i].o += 0.02 + 0.02*Math.random();
-    if(positions[i].o > 2*Math.PI){
-      positions[i].o = 0;
+    // Update y-coordinate
+    bubbles[i].y -= 0.001;
+    if(bubbles[i].y < -0.05){
+      bubbles[i].x = Math.random();
+      bubbles[i].y = 1 + 0.1*Math.random();
+      bubbles[i].r = 9*Math.random() + 1;
+      bubbles[i].o = 0;
+    }
+
+    // Update opacity
+    bubbles[i].o += 0.05 + 0.02*Math.random();
+    if(bubbles[i].o > 2*Math.PI){
+      bubbles[i].o = 0;
+    }
+
+    // Check if quadrant exists
+    is_q = $.grep(get_quadrants(), function(obj) { return obj.id == bubbles[i].qid; });
+    if(is_q.length === 1){
+
+      // Calculate opacity
+      if(bubbles[i].o < 0){op = 0;}
+      else{op = Math.sin(bubbles[i].o);}
+      if(op < 0){op = 0;}
+      ctx.globalAlpha = op;
+
+      // Calculate x and y positions:
+      draw_x = is_q[0].x + xx*is_q[0].w
+      draw_y = yy*is_q[0].h
+
+      // Draw bubble
+      ctx.beginPath();
+      ctx.arc(draw_x, draw_y, rr, 0, 2 * Math.PI, false);
+      ctx.fillStyle = '#008000';
+      ctx.fill();
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = "#00FF31";
+      ctx.stroke();
+
     }
 
   }
 
+  // Draw grdient layer
+  gradient = ctx.createLinearGradient(0, 0, 0, wih);
+  gradient.addColorStop(0, "rgba(0, 128, 0, 0)");
+  gradient.addColorStop(1, "rgba(0, 128, 0, 0.25)");
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, wiw, wih);
 
-  // Something here
-  setTimeout(function(){render_ani(img, positions);}, 100);
+  // Animation Loop
+  setTimeout(function(){render_ani(bubbles);}, 100);
 
 }
 
-window.onload = function(){
-  create_roadmap();
+// Set up a function to calculate positioning
+function get_quadrants(){
+
+  // Get window dimensions
+  let wiw = window.innerWidth;
+  let wih = window.innerHeight;
+
+  // Define number of screen partitions
+  let num_quadrants = 10;
+  if(wiw < 1400){num_quadrants = 8;}
+  if(wiw < 1000){num_quadrants = 6;}
+  if(wiw < 800){num_quadrants = 4;}
+
+  // Calculate partition dimentions
+  let quadrants = [];
+  for(var i = 0; i < num_quadrants; i++) {
+    quadrants.push({
+      id: i,
+      x: i*wiw / num_quadrants,
+      w: wiw / num_quadrants,
+      h: wih
+    });
+  }
+
+  // Return
+  return quadrants;
+
+}
+
+// Initiate array of bubbles for the animation
+function init_bubbles(){
+
+  bpq = 8;
+  max_quadrants = 10;
+  bubbles = []
+  for(var i = 0; i < max_quadrants; i++) {
+    for(var j = 0; j < bpq; j++) {
+      bubbles.push({
+        qid: i,
+        x: Math.random(),
+        y: Math.random(),
+        r: 9*Math.random() + 1,
+        o: -4*Math.random(),
+      });
+    }
+  }
+  return bubbles
+
+}
+
+// Initiate Animations
+$(document).ready(function(){
   roadmap_animation();
-}
+});
