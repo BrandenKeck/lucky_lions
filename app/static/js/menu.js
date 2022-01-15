@@ -71,16 +71,7 @@ function menu_handler(){
   }
 
   // Control the height of the menu and window responsiveness
-  function set_height(){
-    $(menu_wrapper).slimscroll({
-      height: document.documentElement.clientHeight,
-      color: "transparent"
-    });
-  }
-  set_height();
-  $(window).resize(function(){
-    set_height();
-  });
+
 
   // Allow interaction when not animating
   function toggle_active(){
