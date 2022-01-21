@@ -56,8 +56,8 @@ function render_ani(bubbles){
       ctx.globalAlpha = op;
 
       // Calculate x and y positions:
-      draw_x = is_q[0].x + xx*is_q[0].w
-      draw_y = yy*is_q[0].h
+      draw_x = is_q[0].x + xx*is_q[0].w;
+      draw_y = yy*is_q[0].h;
 
       // Draw bubble
       ctx.beginPath();
@@ -130,7 +130,7 @@ function init_bubbles(){
       });
     }
   }
-  return bubbles
+  return bubbles;
 
 }
 

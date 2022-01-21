@@ -74,6 +74,8 @@ MEDIA QUERIES
   .lions-index-desc-text{font-size: 32px;}
   .lions-desc-text{font-size: 24px;}
   .lions-index-link-text{font-size: 18px;}
+  .lions-menu-text{font-size: 28px;}
+  .lions-menu-button{font-size: 28px;}
 }
 
 @media only screen and (max-width: 800px) {
@@ -81,4 +83,6 @@ MEDIA QUERIES
   .lions-index-desc-text{font-size: 24px;}
   .lions-desc-text{font-size: 16px;}
   .lions-index-link-text{font-size: 14px;}
+  .lions-menu-text{font-size: 28px;}
+  .lions-menu-button{font-size: 28px;}
 }

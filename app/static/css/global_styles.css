@@ -12,9 +12,6 @@ GLOBAL FIX
 body{
   background-color: black;
 }
-.navbar-dark{
-  background-color: #003200 !important;
-}
 .btn-primary{
   background-color: #008000;
 }
@@ -28,6 +25,7 @@ BOXES AND STRUCTURES
 .full_screen{
   margin: 0; padding: 0;
   height: 100vh;
+  min-height: -webkit-fill-available;
   width: 100%;
   display: flex;
   overflow: hidden;
