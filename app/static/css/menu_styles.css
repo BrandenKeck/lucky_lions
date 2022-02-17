@@ -21,10 +21,11 @@
   left: 0;
   overflow: hidden;
   pointer-events: none;
+  z-index: 9;
 }
 .nav_menu .trigger{
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   left: 20px;
   top: 20px;
   background-color: transparent;
@@ -105,10 +106,27 @@ HR STYLES
 /*
 MEDIA QUERIES
 */
-@media only screen and (max-width: 1400px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .nav_menu{width: 320px;}
+
 }
 
-@media only screen and (max-width: 800px) {
-  .nav_menu{width: 1500px;}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .nav_menu{width: 320px;}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .nav_menu{width: 320px;}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .nav_menu{width: 320px;}
+
 }

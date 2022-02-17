@@ -69,20 +69,47 @@ LINKS AND CONTROLS
 /*
 MEDIA QUERIES
 */
-@media only screen and (max-width: 1400px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .lions-index-title-text{font-size: 72px;}
   .lions-index-desc-text{font-size: 32px;}
   .lions-desc-text{font-size: 24px;}
   .lions-index-link-text{font-size: 18px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
+
 }
 
-@media only screen and (max-width: 800px) {
-  .lions-index-title-text{font-size: 48px;}
-  .lions-index-desc-text{font-size: 24px;}
-  .lions-desc-text{font-size: 16px;}
-  .lions-index-link-text{font-size: 14px;}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .lions-index-title-text{font-size: 72px;}
+  .lions-index-desc-text{font-size: 32px;}
+  .lions-desc-text{font-size: 24px;}
+  .lions-index-link-text{font-size: 18px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .lions-index-title-text{font-size: 72px;}
+  .lions-index-desc-text{font-size: 32px;}
+  .lions-desc-text{font-size: 24px;}
+  .lions-index-link-text{font-size: 18px;}
+  .lions-menu-text{font-size: 28px;}
+  .lions-menu-button{font-size: 28px;}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .lions-index-title-text{font-size: 72px;}
+  .lions-index-desc-text{font-size: 32px;}
+  .lions-desc-text{font-size: 24px;}
+  .lions-index-link-text{font-size: 18px;}
+  .lions-menu-text{font-size: 28px;}
+  .lions-menu-button{font-size: 28px;}
+
 }

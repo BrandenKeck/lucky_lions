@@ -18,12 +18,8 @@
 <canvas id="app_ani" class="animation_canvas"></canvas>
 <div class="row full_screen">
   <div class="w-100 text-center">
-    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet()">
-      Connect Wallet
-    </button>
-    <p class="lions-header-text">Lucky Lions Application</p>
-    <p class="lions-desc-text">Application Coming Soon.</p>
-    <p class="lions-desc-text">{{ data }}</p>
+    <p class="lions-header-text">Lucky Lions Information</p>
+    <p class="lions-desc-text">Information Coming Soon.</p>
   </div>
 </div>
 
@@ -34,16 +30,5 @@
 
 <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
 <script src="{{ url_for('static', filename='js/app.js') }}"></script>
-<script>
-  function connect_wallet(){
-
-    $.ajax({
-        type : 'POST',
-        url : "{{ url_for('lions.wallet_connect') }}",
-        contentType: 'application/json;charset=UTF-8',
-        data: {"hello": "world"}
-      });
-  }
-</script>
 
 {% endblock %}

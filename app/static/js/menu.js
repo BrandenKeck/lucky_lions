@@ -36,7 +36,7 @@ function menu_handler(){
   }).fromTo(nav_bg, speed, {
     autoAlpha:0
   },{
-    autoAlpha:0.65
+    autoAlpha:0.85
   }).staggerFromTo(li, speed, {
       x: "-120%"
     }, {
@@ -59,7 +59,7 @@ function menu_handler(){
     x: "-100%"
   },
   "-=0.5").fromTo(nav_bg, speed, {
-    autoAlpha:0.65
+    autoAlpha:0.85
   }, {
     autoAlpha:0
   });

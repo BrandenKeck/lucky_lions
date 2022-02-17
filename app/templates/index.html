@@ -4,25 +4,63 @@
 <!-- application block html -->
 {% block app %}
 
+<!-- Canvas Animations -->
 <canvas id="index_ani" class="animation_canvas"></canvas>
-<div class="row full_screen full_screen_align_center">
-  <div class="w-100 text-center">
 
-    <p class="lions-index-title-text">Lucky Lions</p>
+<!-- Full Screen -->
+<div class="row full_screen align_center">
 
-    <a href="{{ url_for('lions.app') }}" class="nav-item btn btn-primary btn-outline-light me-4">
-      <p class="lions-index-link-text">Enter Application</p>
-      <i class="fas fa-angle-double-right lions-index-link-text"></i>
-    </a>
-    <img class="index_image me-4" src="{{ url_for('static', filename='img/stylized_logo.png') }}" />
-    <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light me-4">
-      <p class="lions-index-link-text">View Roadmap</p>
-      <i class="fas fa-angle-double-right lions-index-link-text"></i>
-    </a>
+  <!-- Branding Row -->
+  <div class="row">
+    <div class="w-100 text-center">
 
-    <p class="lions-header-text">Welcome to the Lions Den.</p>
+      <p class="lions-index-title-text">Lucky Lions</p>
+      <img class="index_image me-4" src="{{ url_for('static', filename='img/stylized_logo.png') }}" />
 
+    </div>
   </div>
+
+  <!-- Buttons Row -->
+  <div class="row">
+    <div class="w-100 text-center">
+
+      <a href="{{ url_for('lions.app') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+        <p class="lions-index-link-text">
+          <i class="fas fa-network-wired"></i>
+          Enter Application
+        </p>
+      </a>
+      <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+        <p class="lions-index-link-text">
+          <i class="fas fa-map"></i>
+          View Roadmap
+        </p>
+      </a>
+      <a href="{{ url_for('lions.info') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+        <p class="lions-index-link-text">
+          <i class="fas fa-info-circle"></i>
+          Project Info
+        </p>
+      </a>
+      <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light me-4">
+        <p class="lions-index-link-text">
+          <i class="fas fa-chart-line"></i>
+          Open Tinycharts
+        </p>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Zinger Row -->
+  <div class="row">
+    <div class="w-100 text-center">
+
+      <p class="lions-header-text">Welcome to the Lions Den.</p>
+
+    </div>
+  </div>
+
 </div>
 
 {% endblock %}

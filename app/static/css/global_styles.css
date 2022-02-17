@@ -11,9 +11,12 @@ GLOBAL FIX
 */
 body{
   background-color: black;
+  overflow: hidden;
 }
-.btn-primary{
-  background-color: #008000;
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #008000;
+    border: 1px solid white;
+    color: white;
 }
 .hidden{
   visibility: hidden;
@@ -28,60 +31,69 @@ BOXES AND STRUCTURES
   min-height: -webkit-fill-available;
   width: 100%;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
-.full_screen_align_center{
-  align-items: center;
+.container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 .animation_canvas{
   position: fixed;
   z-index: -1;
 }
-.shaded_box{
-  background-color: rgba(0,0,0,0.5);
-  border-radius: 10px;
-  margin: 20px; padding: 20px;
-}
-.
+.align_center{align-items: center;}
 
 /*
 SPACING
 */
+.base_padding{
+  padding-left: 100px; padding-right: 100px;
+  padding-top: 100px; padding-bottom: 100px;
+}
+.content_padding{
+  padding-left: 20px; padding-right: 20px;
+  padding-top: 30px; padding-bottom: 30px;
+}
 .top_spacing{
   padding-top: 100px;
-}
-#roadmap{
-  padding-top: 20px; padding-bottom: 20px;
-  padding-left: 360px; padding-right: 360px;
 }
 
 /*
 IMAGES
 */
 .index_image{
-  width: 440px;
+  width: 320px;
   display: inline;
 }
 
-@media only screen and (max-width: 1750px) {
-  #roadmap{
-    padding-top: 10px; padding-bottom: 10px;
-    padding-left: 0px; padding-right: 0px;
-  }
+
+/*
+MEDIA QUERIES
+*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .index-image{width: 320px;}
+
 }
 
-@media only screen and (max-width: 1400px) {
-  .index-image{width: 260px;}
-  #roadmap{
-    padding-top: 10px; padding-bottom: 10px;
-    padding-left: 0px; padding-right: 0px;
-  }
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .index-image{width: 320px;}
+
 }
 
-@media only screen and (max-width: 800px) {
-  .index-image{width: 180px;}
-  #roadmap{
-    padding-top: 10px; padding-bottom: 10px;
-    padding-left: 60px; padding-right: 60px;
-  }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .index-image{width: 320px;}
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .index-image{width: 320px;}
+
 }

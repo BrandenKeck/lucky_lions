@@ -5,6 +5,7 @@
 {% block styles %}
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/menu_styles.css') }}" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/roadmap_styles.css') }}" />
 
 {% endblock %}
 
@@ -18,45 +19,42 @@
 
 <canvas id="roadmap_ani" class="animation_canvas"></canvas>
 <div class="row full_screen">
+
   <div class="w-100 text-center">
     <p class="lions-header-text">Lucky Lions Road Map</p>
     <p class="lions-desc-text">Here's What's Cookin'</p>
   </div>
-  <div id="roadmap" class="text-left">
-    <div class="shaded_box">
-      <p class="lions-desc-text">
-        <u><b>Q1 2022:</b> UI Development</u>
-      </p>
-      <p class="lions-desc-text">
-        During the first quarter of 2022, we will be developing our website interface.
-      </p>
+
+  <!-- Construct a timeline object -->
+  <div class="container content_padding">
+    <div class="row">
+      <div class="col-12">
+
+          {% for item in tl["items"] %}
+            <div class="single-timeline-area">
+              <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                  <p class="lions-desc-text">{{ item["name"] }}</p>
+              </div>
+              <div class="row">
+                {% for goal in item["goals"] %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                        <div class="timeline-icon"><i class="fa fa-{{ goal["icon"] }}" aria-hidden="true"></i></div>
+                        <div class="timeline-text">
+                            <p class="lions-desc-text"><b>{{ goal["name"] }}</b></p>
+                            <p class="lions-desc-text">{{ goal["content"] }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
     </div>
-    <div class="shaded_box">
-      <p class="lions-desc-text">
-        <u><b>Q2 2022:</b> Smart Contract Development</u>
-      </p>
-      <p class="lions-desc-text">
-        We will be working on our Algorand Smart Contracts throughout Q2 2022.
-      </p>
-    </div>
-    <div class="shaded_box">
-      <p class="lions-desc-text">
-        <u><b>Q3 2022:</b> Application Launch and Initial Incentives</u>
-      </p>
-      <p class="lions-desc-text">
-        During this phase, we will be engaging potential users via coin offerings and other incentives.
-      </p>
-    </div>
-    <div class="shaded_box">
-      <p class="lions-desc-text">
-        <u><b>Q4 2022:</b> Ongoing Development and Relationship Building</u>
-      </p>
-      <p class="lions-desc-text">
-        Throughout the later part of the year, we will be working on nice-to-have features
-        and will be working to develop relationships with other projects in the Algorand community
-      </p>
-    </div>
-  </div>
+
 </div>
 
 {% endblock %}
