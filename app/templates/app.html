@@ -18,12 +18,16 @@
 <canvas id="app_ani" class="animation_canvas"></canvas>
 <div class="row full_screen">
   <div class="w-100 text-center">
-    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet()">
-      Connect Wallet
-    </button>
     <p class="lions-header-text">Lucky Lions Application</p>
     <p class="lions-desc-text">Application Coming Soon.</p>
-    <p class="lions-desc-text">{{ data }}</p>
+  </div>
+  <div id="connect_btns" class="w-100 text-center">
+    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet_myalgo()">
+      Connect With MyAlgo
+    </button>
+    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet_wallectconnect()">
+      Connect With WalletConnect
+    </button>
   </div>
 </div>
 
@@ -32,18 +36,20 @@
 <!-- added scripts block html -->
 {% block script %}
 
-<script src="{{ url_for('static', filename='js/menu.js') }}"></script>
-<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/page/menu.js') }}"></script>
+<script src="{{ url_for('static', filename='js/page/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/page/connect_dist.js') }}"></script>
 <script>
-  function connect_wallet(){
-
-    $.ajax({
-        type : 'POST',
-        url : "{{ url_for('lions.wallet_connect') }}",
-        contentType: 'application/json;charset=UTF-8',
-        data: {"hello": "world"}
-      });
+  $(document).ready(function(){
+    console.log(connectors);
+  });
+  function connect_wallet_myalgo(){
+    connectors.connect_myalgo()
+  }
+  function connect_wallet_wallectconnect(){
+    connectors.connect_walletconnect()
   }
 </script>
+
 
 {% endblock %}

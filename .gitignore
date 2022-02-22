@@ -1,7 +1,10 @@
+*~
 .venv
 aws_keys
 instance
 migrations
+*node_modules
 */__pycache__/
 app/models/__pycache__/
-*~
+*package-lock.json
+*keys.json

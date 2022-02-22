@@ -101,19 +101,9 @@ def roadmap():
 # Route to application pages
 @lions_bp.route('/app', methods=('GET',))
 def app():
-    data = "kathryn"
-    return render_template('app.html', data=data)
+    return render_template('app.html')
 
 # Route to application pages
 @lions_bp.route('/info', methods=('GET',))
 def info():
     return render_template('info.html')
-
-# Route to application pages
-@lions_bp.route('/wallet_connect', methods=['GET','POST'])
-def wallet_connect():
-
-    if request.method == "POST":
-          print(request)
-
-    return render_template('app.html', data="hello")

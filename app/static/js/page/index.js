@@ -56,5 +56,5 @@ function render_ani(img, positions){
 }
 
 $(document).ready(function(){
-  index_animation();
+  // TODO: index_animation();
 });

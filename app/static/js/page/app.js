@@ -57,5 +57,5 @@ function render_ani(positions){
 }
 
 $(document).ready(function(){
-  app_animation();
+  // TODO
 });

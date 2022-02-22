@@ -30,11 +30,10 @@
 
   </div>
 
-  <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/jquery.slimscroll.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/gsap.min.js') }}"></script>
-  <script src="{{ url_for('static', filename='js/fontawesome.min.js') }}" crossorigin="anonymous"></script>
+  <script src="{{ url_for('static', filename='js/package/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/package/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/package/gsap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/package/fontawesome.min.js') }}" crossorigin="anonymous"></script>
   {% block script %}
   <!-- Additional Scripts Are Added Here -->
   {% endblock %}
