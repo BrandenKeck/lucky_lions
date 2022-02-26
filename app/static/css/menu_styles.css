@@ -14,7 +14,7 @@
 
 /* POSITIONING AND COMPONENTS */
 .nav_menu{
-  width: 320px;
+  width: 420px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -99,34 +99,34 @@ HR STYLES
 */
 .menu_hr{
   background-color: #fff;
-  width: 80%;
-  text-align: center;
+  width: 100%;
 }
 
 /*
 MEDIA QUERIES
 */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1300px) {
+  .nav_menu{width: 380px;}
+
+}
+
+/* Small devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 800px) {
   .nav_menu{width: 320px;}
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .nav_menu{width: 320px;}
-
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .nav_menu{width: 320px;}
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .nav_menu{width: 320px;}
-
+/* Cell Phone */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+  .nav_menu{width: 560px;}
+  .nav_menu .trigger{
+    left: 40px;
+    top: 40px;
+  }
 }

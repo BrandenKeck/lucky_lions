@@ -36,9 +36,8 @@ BOXES AND STRUCTURES
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
-.container::-webkit-scrollbar { /* WebKit */
-    width: 0;
-    height: 0;
+.full_screen::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
 }
 .animation_canvas{
   position: fixed;
@@ -53,22 +52,14 @@ SPACING
   padding-left: 50px; padding-right: 50px;
   padding-top: 20px; padding-bottom: 120px;
 }
-.content_padding{
-  padding-left: 20px; padding-right: 20px;
-  padding-top: 30px; padding-bottom: 30px;
-}
-.top_spacing{
-  padding-top: 100px;
-}
-.btn_padding{
-  margin-top: 10px;
-}
+.top_spacing{padding-top: 10px;}
+.bottom_spacing{padding-bottom: 50px;}
 
 /*
 IMAGES
 */
 .index_image{
-  width: 360px;
+  width: 420px;
   display: inline;
 }
 
@@ -77,26 +68,41 @@ IMAGES
 MEDIA QUERIES
 */
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-  .index-image{width: 320px;}
+/* large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1300px) {
+  .base_padding{
+    padding-left: 50px; padding-right: 50px;
+    padding-top: 20px; padding-bottom: 120px;
+  }
+  .top_spacing{padding-top: 12px;}
+  .bottom_spacing{padding-bottom: 80px;}
+  .index_image{width: 360px;}
+}
+
+/* Small devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 800px) {
+  .base_padding{
+    padding-left: 50px; padding-right: 50px;
+    padding-top: 20px; padding-bottom: 120px;
+  }
+  .top_spacing{padding-top: 12px;}
+  .bottom_spacing{padding-bottom: 80px;}
+  .index_image{width: 320px;}
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .index-image{width: 320px;}
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .index-image{width: 320px;}
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-  .index-image{width: 320px;}
+/* Cell Phone */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .base_padding{
+      padding-left: 20px; padding-right: 20px;
+      padding-top: 20px; padding-bottom: 20px;
+    }
+    .top_spacing{padding-top: 12px;}
+    .bottom_spacing{padding-bottom: 80px;}
+    .index_image{width: 640px;}
 
 }

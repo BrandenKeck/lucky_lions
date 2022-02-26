@@ -9,49 +9,29 @@ FONT IMPORT
 /*
 STANDARD TEXT
 */
-.lions-logo-text{
-  font-family: "courier new";
-  font-weight: bold;
-  font-size: 32px;
-  display: inline;
-  margin: 0px;
-  padding-left: 4px;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
+
 .lions-index-title-text{
-  margin: 0px; padding: 0px;
+  margin: 0px;
   font-family: "brutality"; Arial;
-  font-size: 120px;
+  font-size: 100px;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-.lions-header-text{
-  margin: 0px; padding: 0px;
-  font-family: "courier new";
-  font-weight: bold;
-  font-size: 48px;
-  color: white;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
-}
+
 .lions-text{
   margin: 0px; padding: 0px;
   font-family: "courier new";
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-.lions-desc-text{
-  margin: 0px; padding: 0px;
-  font-family: "courier new";
-  font-size: 28px;
-  color: white;
-  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+.lions-header-text{
+  font-weight: bold;
+  font-size: 52px;
 }
-.lions-roadmap-header{
-  font-size: 20px;
-}
-.lions-roadmap-text{
-  font-size: 18px;
-}
+.lions-desc-text{font-size: 32px;}
+.lions-roadmap-header{font-size: 24px;}
+.lions-roadmap-text{font-size: 20px;}
+.lions-tooltip-text{font-size: 24px;}
 
 /*
 LINKS AND CONTROLS
@@ -65,7 +45,7 @@ LINKS AND CONTROLS
 .lions-menu-text{
   text-shadow: 2px 2px #000;
   font-family: "courier new";
-  font-size: 28px;
+  font-size: 36px;
   display: inline;
 }
 .lions-menu-button{
@@ -83,46 +63,59 @@ LINKS AND CONTROLS
 MEDIA QUERIES
 */
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
+/* large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1300px) {
+
+  /* Standard Text */
+  .lions-index-title-text{font-size: 82px;}
+  .lions-header-text{font-size: 48px;}
+  .lions-desc-text{font-size: 28px;}
+  .lions-roadmap-header{font-size: 18px;}
+  .lions-roadmap-text{font-size: 16px;}
+  .lions-tooltip-text{font-size: 18px;}
+
+  /* Links and Controls */
+  .lions-index-link-text{font-size: 18px;}
+  .lions-menu-text{font-size: 32px;}
+  .lions-menu-button{font-size: 28px;}
+
+}
+
+/* Small devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 800px) {
+
+  /* Standard Text */
   .lions-index-title-text{font-size: 72px;}
-  .lions-index-desc-text{font-size: 32px;}
+  .lions-header-text{font-size: 42px;}
   .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 26px;}
+  .lions-roadmap-header{font-size: 18px;}
+  .lions-roadmap-text{font-size: 16px;}
+  .lions-tooltip-text{font-size: 18px;}
+
+  /* Links and Controls */
+  .lions-index-link-text{font-size: 18px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
-  .lions-index-title-text{font-size: 72px;}
-  .lions-index-desc-text{font-size: 32px;}
-  .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 26px;}
-  .lions-menu-text{font-size: 28px;}
-  .lions-menu-button{font-size: 28px;}
+/* Cell Phone */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    /* Standard Text */
+    .lions-index-title-text{font-size: 120px;}
+    .lions-header-text{font-size: 64px;}
+    .lions-desc-text{font-size: 48px;}
+    .lions-roadmap-header{font-size: 36px;}
+    .lions-roadmap-text{font-size: 32px;}
+    .lions-tooltip-text{font-size: 36px;}
 
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-  .lions-index-title-text{font-size: 72px;}
-  .lions-index-desc-text{font-size: 32px;}
-  .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 26px;}
-  .lions-menu-text{font-size: 28px;}
-  .lions-menu-button{font-size: 28px;}
-
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-  .lions-index-title-text{font-size: 72px;}
-  .lions-index-desc-text{font-size: 32px;}
-  .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 26px;}
-  .lions-menu-text{font-size: 28px;}
-  .lions-menu-button{font-size: 28px;}
+    /* Links and Controls */
+    .lions-index-link-text{font-size: 36px;}
+    .lions-menu-text{font-size: 56px;}
+    .lions-menu-button{font-size: 48px;}
 
 }

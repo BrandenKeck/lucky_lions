@@ -35,7 +35,7 @@ function render_ani(bubbles){
     if(bubbles[i].y < -0.05){
       bubbles[i].x = Math.random();
       bubbles[i].y = 1 + 0.1*Math.random();
-      bubbles[i].r = 9*Math.random() + 1;
+      bubbles[i].r = 4*Math.random() + 1;
       bubbles[i].o = 0;
     }
 
@@ -62,7 +62,8 @@ function render_ani(bubbles){
       // Draw bubble
       ctx.beginPath();
       ctx.arc(draw_x, draw_y, rr, 0, 2 * Math.PI, false);
-      ctx.fillStyle = '#008000';
+      // ctx.fillStyle = '#008000';
+      ctx.fillStyle = '#00FF31';
       ctx.fill();
       ctx.lineWidth = 2;
       ctx.strokeStyle = "#00FF31";
@@ -116,7 +117,7 @@ function get_quadrants(){
 // Initiate array of bubbles for the animation
 function init_bubbles(){
 
-  bpq = 8;
+  bpq = 12;
   max_quadrants = 10;
   bubbles = []
   for(var i = 0; i < max_quadrants; i++) {
@@ -125,7 +126,7 @@ function init_bubbles(){
         qid: i,
         x: Math.random(),
         y: Math.random(),
-        r: 9*Math.random() + 1,
+        r: 4*Math.random() + 1,
         o: -4*Math.random(),
       });
     }

@@ -1,3 +1,7 @@
+/*
+ROADMAP COMPONENTS
+*/
+
 .single-timeline-area {
     position: relative;
     padding-left: 180px;
@@ -38,7 +42,6 @@
     right: 26px;
     margin-top: -5.5px;
 }
-
 .single-timeline-area .single-timeline-content {
     position: relative;
     padding: 30px 30px 25px;
@@ -64,34 +67,51 @@
     border-radius: 50%;
     margin-right: 15px;
 }
-
 .single-timeline-area .single-timeline-content .timeline-icon i {
     color: #ffffff;
     line-height: 50px;
     font-size: 24px;
 }
 
+/*
+PADDING
+*/
+.content_padding{
+  padding-left: 20px; padding-right: 20px;
+  padding-top: 30px; padding-bottom: 30px;
+}
 
 /*
 MEDIA QUERIES
 */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* large devices (large laptops and desktops, 1200px and down) */
+@media only screen and (max-width: 1300px) {
+  .content_padding{
+    padding-left: 20px; padding-right: 20px;
+    padding-top: 30px; padding-bottom: 30px;
+  }
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Small devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 800px) {
+  .content_padding{
+    padding-left: 20px; padding-right: 20px;
+    padding-top: 30px; padding-bottom: 30px;
+  }
 
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Cell Phone */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .content_padding{
+      padding-left: 8px; padding-right: 8px;
+      padding-top: 10px; padding-bottom: 10px;
+    }
 
 }

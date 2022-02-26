@@ -11,15 +11,16 @@
   <div class="row">
     <div class="w-100 text-center">
 
-      <p class="lions-index-title-text">LIONS FUND</p>
-      <img class="index_image me-4" src="{{ url_for('static', filename='img/stylized_logo.png') }}" />
+      <p class="lions-index-title-text top_spacing">LionCoin Organization</p>
+      <p class="lions-text lions-desc-text">Welcome to the Lions Den.</p>
+      <img class="index_image top_spacing" src="{{ url_for('static', filename='img/stylized_logo.png') }}" />
 
     </div>
   </div>
 
   <!-- Buttons Row -->
   <div class="row">
-    <div class="w-100 text-center">
+    <div class="w-100 text-center bottom_spacing">
 
       <!-- <a type="button" href="{{ url_for('lions.app') }}" class="nav-item btn btn-primary btn-outline-light me-4" disabled>
         <p class="lions-index-link-text">
@@ -27,7 +28,7 @@
           Enter Application
         </p>
       </a> -->
-      <button type="button" class="btn btn-secondary btn-outline-light btn_padding me-4" data-toggle="tooltip" data-placement="top" title="Coming Soon!">
+      <button type="button" class="btn btn-secondary btn-outline-light me-2 mt-2" data-bs-toggle="tooltip" data-bs-html="true" title="<p class='lions-tooltip-text'>Coming Soon!</p>">
         <p class="lions-index-link-text">
           <i class="fas fa-network-wired"></i>
           Enter Application
@@ -40,35 +41,33 @@
           Project Info
         </p>
       </a> -->
-      <button type="button" class="btn btn-secondary btn-outline-light btn_padding me-4" data-toggle="tooltip" data-placement="top" title="Coming Soon!">
+      <button type="button" class="btn btn-secondary btn-outline-light me-2 mt-2" data-bs-toggle="tooltip" data-bs-html="true" title="<p class='lions-tooltip-text'>Coming Soon!</p>">
         <p class="lions-index-link-text">
           <i class="fas fa-info-circle"></i>
           Project Info
         </p>
       </button>
 
-      <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light btn_padding me-4">
+      <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light me-2 mt-2">
         <p class="lions-index-link-text">
           <i class="fas fa-map"></i>
           View Roadmap
         </p>
       </a>
 
-      <a href="{{ url_for('lions.roadmap') }}" class="nav-item btn btn-primary btn-outline-light btn_padding me-4">
+      <a href="https://tinychart.org/asset/372666897" target="_blank" class="nav-item btn btn-primary btn-outline-light me-2 mt-2">
         <p class="lions-index-link-text">
           <i class="fas fa-chart-line"></i>
-          Open Tinycharts
+          Open Tinychart
         </p>
       </a>
 
-    </div>
-  </div>
-
-  <!-- Zinger Row -->
-  <div class="row">
-    <div class="w-100 text-center">
-
-      <p class="lions-header-text">Welcome to the Lions Den.</p>
+      <a href="https://app.tinyman.org/#/swap?asset_in=0&asset_out=372666897" target="_blank" class="nav-item btn btn-primary btn-outline-light me-2 mt-2">
+        <p class="lions-index-link-text">
+          <i class="fas fa-wallet"></i>
+          Buy LionCoin
+        </p>
+      </a>
 
     </div>
   </div>
@@ -83,7 +82,10 @@
 <script src="{{ url_for('static', filename='js/animation/bubbles_animation.js') }}"></script>
 <script>
   $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
   })
 </script>
 
