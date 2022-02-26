@@ -12,10 +12,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -ms-grid-row-align: center;
-    align-items: center;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -38,7 +34,7 @@
     border-radius: 50%;
     background-color: #008000;
     content: "";
-    top: 50%;
+    top: 16px;
     right: 26px;
     margin-top: -5.5px;
 }
@@ -53,6 +49,7 @@
     box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
     border: 1px solid #ebebeb;
     z-index: -1;
+    background-color: rgba(0, 0, 0, .75);
 }
 .single-timeline-area .single-timeline-content .timeline-icon {
     -webkit-transition-duration: 500ms;

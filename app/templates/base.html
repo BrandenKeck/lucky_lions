@@ -4,7 +4,7 @@
 
 <!-- Head info -->
 <head>
-  <title>Lucky Lions</title>
+  <title>Lions Fund - Algorand</title>
   <link rel="icon" type="image/jpg" href="{{ url_for('static', filename='img/lucky_lions_ico.png') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css') }}" />
@@ -22,7 +22,11 @@
   <!-- Page Navbars are Added Here -->
   {% endblock %}
 
-  <div class="container-fluid">
+  <!-- Canvas Animations -->
+  <canvas id="animation_canvas" class="animation_canvas"></canvas>
+
+  <!-- App Block -->
+  <div class="container-fluid base_padding">
 
     {% block app %}
     <!-- Page Content is Added Here -->

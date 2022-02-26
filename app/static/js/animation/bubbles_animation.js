@@ -1,8 +1,8 @@
 // Global Canvas and Context
-let canvas = document.getElementById('roadmap_ani');
+let canvas = document.getElementById('animation_canvas');
 let ctx = canvas.getContext('2d');
 
-function roadmap_animation(){
+function bubbles_animation(){
 
   // Start Animation on Image Load
     bubbles = init_bubbles();
@@ -136,5 +136,5 @@ function init_bubbles(){
 
 // Initiate Animations
 $(document).ready(function(){
-  roadmap_animation();
+  bubbles_animation();
 });

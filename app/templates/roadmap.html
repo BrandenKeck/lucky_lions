@@ -17,11 +17,11 @@
 <!-- application block html -->
 {% block app %}
 
-<canvas id="roadmap_ani" class="animation_canvas"></canvas>
+<!-- Full Screen -->
 <div class="row full_screen">
 
   <div class="w-100 text-center">
-    <p class="lions-header-text">Lucky Lions Road Map</p>
+    <p class="lions-header-text">Lion Coin Road Map</p>
     <p class="lions-desc-text">Here's What's Cookin'</p>
   </div>
 
@@ -33,16 +33,16 @@
           {% for item in tl["items"] %}
             <div class="single-timeline-area">
               <div class="timeline-date wow fadeInLeft" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                  <p class="lions-desc-text">{{ item["name"] }}</p>
+                  <p class="lions-text lions-roadmap-header">{{ item["name"] }}</p>
               </div>
               <div class="row">
                 {% for goal in item["goals"] %}
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-lg-4">
                     <div class="single-timeline-content d-flex wow fadeInLeft" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInLeft;">
                         <div class="timeline-icon"><i class="fa fa-{{ goal["icon"] }}" aria-hidden="true"></i></div>
                         <div class="timeline-text">
-                            <p class="lions-desc-text"><b>{{ goal["name"] }}</b></p>
-                            <p class="lions-desc-text">{{ goal["content"] }}</p>
+                            <p class="lions-text lions-roadmap-header"><b>{{ goal["name"] }}</b></p>
+                            <p class="lions-text lions-roadmap-text">{{ goal["content"] }}</p>
                         </div>
                     </div>
                 </div>
@@ -63,6 +63,6 @@
 {% block script %}
 
 <script src="{{ url_for('static', filename='js/page/menu.js') }}"></script>
-<script src="{{ url_for('static', filename='js/page/roadmap.js') }}"></script>
+<script src="{{ url_for('static', filename='js/animation/bubbles_animation.js') }}"></script>
 
 {% endblock %}

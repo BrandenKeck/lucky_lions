@@ -15,7 +15,6 @@
 <!-- application block html -->
 {% block app %}
 
-<canvas id="app_ani" class="animation_canvas"></canvas>
 <div class="row full_screen">
   <div class="w-100 text-center">
     <p class="lions-header-text">Lucky Lions Application</p>
@@ -37,7 +36,6 @@
 {% block script %}
 
 <script src="{{ url_for('static', filename='js/page/menu.js') }}"></script>
-<script src="{{ url_for('static', filename='js/page/app.js') }}"></script>
 <script src="{{ url_for('static', filename='js/page/connect_dist.js') }}"></script>
 <script>
   $(document).ready(function(){

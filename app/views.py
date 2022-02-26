@@ -35,7 +35,7 @@ def roadmap():
                     {
                         "icon": "home",
                         "name": "Establish Website",
-                        "content": "Create a landing site with all necessary information regarding the Lucky Lions project."
+                        "content": "Create a landing site with all necessary information regarding the Lion Coin project."
                     },
                     {
                         "icon": "twitter",
@@ -55,12 +55,12 @@ def roadmap():
                     {
                         "icon": "mobile-alt",
                         "name": "Application Development",
-                        "content": "Create a web application capable of user interaction and testing."
+                        "content": "Create a web application template for the purpose of user interaction and testing."
                     },
                     {
                         "icon": "file-contract",
                         "name": "Create Smart Contracts",
-                        "content": "Complete development of initial dApp smart contracts required to run the lucky lions platform."
+                        "content": "Complete development of initial dApp smart contracts required to run the Lion Coin platform."
                     }
                 ]
             },
@@ -84,7 +84,7 @@ def roadmap():
                 "goals": [
                     {
                         "icon": "paint-brush",
-                        "name": "Lucky Lions NFT Contest",
+                        "name": "Lion Coin NFT Contest",
                         "content": "Launch the promotional NFT contest and work on NFT creation for the platform."
                     },
                     {

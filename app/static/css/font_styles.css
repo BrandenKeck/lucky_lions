@@ -2,8 +2,8 @@
 FONT IMPORT
 */
 @font-face{
-  font-family: "beastian";
-  src: url("font/beastian.ttf");
+  font-family: "brutality";
+  src: url("font/brutality.ttf");
 }
 
 /*
@@ -20,8 +20,8 @@ STANDARD TEXT
 }
 .lions-index-title-text{
   margin: 0px; padding: 0px;
-  font-family: "beastian"; Arial;
-  font-size: 112px;
+  font-family: "brutality"; Arial;
+  font-size: 120px;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
@@ -33,12 +33,24 @@ STANDARD TEXT
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
+.lions-text{
+  margin: 0px; padding: 0px;
+  font-family: "courier new";
+  color: white;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
 .lions-desc-text{
   margin: 0px; padding: 0px;
   font-family: "courier new";
   font-size: 28px;
   color: white;
   text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.lions-roadmap-header{
+  font-size: 20px;
+}
+.lions-roadmap-text{
+  font-size: 18px;
 }
 
 /*
