@@ -60,6 +60,9 @@ SPACING
 .top_spacing{
   padding-top: 100px;
 }
+.btn_padding{
+  margin-top: 10px;
+}
 
 /*
 IMAGES
@@ -74,14 +77,8 @@ IMAGES
 MEDIA QUERIES
 */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-  .index-image{width: 320px;}
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
   .index-image{width: 320px;}
 
 }
@@ -92,8 +89,14 @@ MEDIA QUERIES
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1200px) {
-  .index-image{width: 10px;}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .index-image{width: 320px;}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .index-image{width: 320px;}
 
 }

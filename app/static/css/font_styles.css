@@ -59,7 +59,7 @@ LINKS AND CONTROLS
 
 .lions-index-link-text{
   font-family: Arial;
-  font-size: 36px;
+  font-size: 26px;
   display: inline;
 }
 .lions-menu-text{
@@ -76,51 +76,52 @@ LINKS AND CONTROLS
   text-shadow: 2px 2px #000;
   font-family: "courier new";
   font-size: 28px;
+  padding-top: 10px
 }
 
 /*
 MEDIA QUERIES
 */
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
   .lions-index-title-text{font-size: 72px;}
   .lions-index-desc-text{font-size: 32px;}
   .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 18px;}
-  .lions-menu-text{font-size: 28px;}
-  .lions-menu-button{font-size: 28px;}
-
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .lions-index-title-text{font-size: 72px;}
-  .lions-index-desc-text{font-size: 32px;}
-  .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 18px;}
+  .lions-index-link-text{font-size: 26px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
 
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
   .lions-index-title-text{font-size: 72px;}
   .lions-index-desc-text{font-size: 32px;}
   .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 18px;}
+  .lions-index-link-text{font-size: 26px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
 
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
   .lions-index-title-text{font-size: 72px;}
   .lions-index-desc-text{font-size: 32px;}
   .lions-desc-text{font-size: 24px;}
-  .lions-index-link-text{font-size: 18px;}
+  .lions-index-link-text{font-size: 26px;}
+  .lions-menu-text{font-size: 28px;}
+  .lions-menu-button{font-size: 28px;}
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .lions-index-title-text{font-size: 72px;}
+  .lions-index-desc-text{font-size: 32px;}
+  .lions-desc-text{font-size: 24px;}
+  .lions-index-link-text{font-size: 26px;}
   .lions-menu-text{font-size: 28px;}
   .lions-menu-button{font-size: 28px;}
 
