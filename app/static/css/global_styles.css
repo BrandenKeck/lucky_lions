@@ -21,6 +21,9 @@ body{
 .hidden{
   visibility: hidden;
 }
+.not_displayed{
+  display: none;
+}
 
 /*
 BOXES AND STRUCTURES

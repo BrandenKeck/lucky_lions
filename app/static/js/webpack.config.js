@@ -1,4 +1,5 @@
  const path = require('path');
+ const webpack = require('webpack');
 
 // webpack.config.js
 module.exports = {
@@ -17,5 +18,10 @@ module.exports = {
       "crypto": require.resolve("crypto-browserify"),
       "stream": require.resolve("stream-browserify")
     }
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+        Buffer: ['buffer', 'Buffer']
+    }),
+  ]
 }

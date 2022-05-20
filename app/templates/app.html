@@ -17,17 +17,54 @@
 
 <div class="row full_screen">
   <div class="w-100 text-center">
-    <p class="lions-text lions-header-text">Lucky Lions Application</p>
-    <p class="lions-text lions-desc-text">Application Coming Soon.</p>
+    <p class="lions-text lions-header-text">Lucky Lions Application Demo</p>
+    <!-- <p class="lions-text lions-desc-text">Application Demo.</p> -->
   </div>
-  <div id="connect_btns" class="w-100 text-center">
-    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet_myalgo()">
-      Connect With MyAlgo
-    </button>
-    <button class="nav-item btn btn-primary btn-outline-light me-4" onclick="connect_wallet_wallectconnect()">
-      Connect With WalletConnect
-    </button>
+
+
+  <div id="app_container" class="w-100 text-center">
+
+    <div id="connection_wrapper">
+      <button id="connection_dropdown" type="button" class="nav-item btn btn-primary btn-outline-light" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-wallet"></i>
+        Connect Wallet
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="connection_dropdown">
+        <li><a class="dropdown-item" href="javascript:connect_wallet_myalgo()">Connect with MyAlgo</a></li>
+        <li><a class="dropdown-item" href="javascript:connect_wallet_wallectconnect()">Connect with Pera</a></li>
+      </ul>
+    </div>
+
+    <div id="app_controls" class="not_displayed">
+      <p class="lions-text lions-desc-text">
+        Connected:
+        <b><span id="connected_address"></span></b>
+      </p>
+      <img class="index_image mt-4" src="{{ url_for('static', filename='img/sam.png') }}" />
+      <br />
+      <button class="nav-item btn btn-primary btn-outline-light mt-4 me-4" onclick="run_app()">
+        <i class="fas fa-paper-plane"></i>
+        Send Branden A LionCoin
+      </button>
+      <button class="nav-item btn btn-primary btn-outline-light mt-4" onclick="disconnect_app()">
+        <i class="fas fa-unlink"></i>
+        Disconnect
+      </button>
+    </div>
+
+    <div id="loading" class="not_displayed">
+      <img class="mt-4" src="{{ url_for('static', filename='img/loading.gif') }}" />
+    </div>
+
+    <div id="thank_you" class="not_displayed">
+      <p class="lions-text lions-desc-text">
+        Thank You!
+      </p>
+    </div>
+
   </div>
+
+
 </div>
 
 {% endblock %}
@@ -38,15 +75,68 @@
 <script src="{{ url_for('static', filename='js/page/menu.js') }}"></script>
 <script src="{{ url_for('static', filename='js/page/connect_dist.js') }}"></script>
 <script>
-  $(document).ready(function(){
-    console.log(connectors);
-  });
+
+  // MyAlgo Approach
   function connect_wallet_myalgo(){
-    connectors.connect_myalgo()
+    connectors.connect_myalgo();
   }
+
+  // WalletConnect Approach
   function connect_wallet_wallectconnect(){
-    connectors.connect_walletconnect()
+    connectors.connect_wallet_wallectconnect();
   }
+  function disconnect_wallet_wallectconnect(){
+    connectors.disconnect_wallet_wallectconnect();
+  }
+
+  // Run App
+  function run_app(){
+
+    loading_state();
+    connectors.run_app();
+
+  }
+
+  // Load application
+  function load_application(address){
+
+    $("#connected_address").text(address);
+    $("#app_container").fadeOut(1000, function(){
+      $("#connection_wrapper").addClass("not_displayed");
+      $("#app_controls").removeClass("not_displayed");
+      $("#app_container").fadeIn(1000);
+    });
+
+  }
+
+  // Disconnect Application
+  function disconnect_app(){
+    disconnect_wallet_wallectconnect();
+    $("#app_container").fadeOut(1000, function(){
+      $("#connection_wrapper").removeClass("not_displayed");
+      $("#app_controls").addClass("not_displayed");
+      $("#app_container").fadeIn(1000);
+    });
+  }
+
+  // Loading Screen
+  function loading_state(){
+    $("#app_container").fadeOut(1000, function(){
+      $("#app_controls").addClass("not_displayed");
+      $("#loading").removeClass("not_displayed");
+      $("#app_container").fadeIn(1000);
+    });
+  }
+
+  // Loading Screen
+  function thank_you(){
+    $("#app_container").fadeOut(1000, function(){
+      $("#loading").addClass("not_displayed");
+      $("#thank_you").removeClass("not_displayed");
+      $("#app_container").fadeIn(1000);
+    });
+  }
+
 </script>
 
 
