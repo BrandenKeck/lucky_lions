@@ -148,10 +148,7 @@ const send_a_lioncoin_walletconnect = async () =>{
 
   // Get transaction result
   const result = await walletconnect_connection.sendCustomRequest(request);
-  const decodedResult = result.map(element => {
-    return element ? new Uint8Array(Buffer.from(element, "base64")) : null;
-  });
-  console.log(decodedResult);
+  console.log(result);
   thank_you();
 
 }

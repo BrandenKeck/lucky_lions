@@ -72,6 +72,10 @@
 <!-- added scripts block html -->
 {% block script %}
 
+<!-- DEBUG -->
+<script src="{{ url_for('static', filename='js/package/encoding-indexes.js') }}"></script>
+<script src="{{ url_for('static', filename='js/package/encoding.js') }}"></script>
+
 <script src="{{ url_for('static', filename='js/page/menu.js') }}"></script>
 <script src="{{ url_for('static', filename='js/page/connect_dist.js') }}"></script>
 <script>
