@@ -21,7 +21,7 @@ const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
 const address = localStorage.getItem('address');
 
 // prize address
-const prizeAddress = 'IR5WRFZVFQQY2RSKSLBBOEJDCJLDDR2M2OAWJ7K4HG7NQTASEJWFW2DCIQ'
+const prizeAddress = ''
 
 //asset id
 const ASSET_ID = 22081217;
